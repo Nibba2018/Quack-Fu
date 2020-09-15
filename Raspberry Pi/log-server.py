@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/<payload>', methods = ['GET'])
 def get_payloads(payload):
-    with open(f'payloads/%s.pyw' % (payload), 'r') as f:
+    with open('payloads/%s.pyw' % (payload), 'r') as f:
         return f.read()
 
 
